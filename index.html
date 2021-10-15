@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>Heat Stone</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/custom-swiper.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="wrapper header-wrapper">
+        <div class="header-top">
+          <a href="/" class="header-logo">
+            <img src="img/icon/logo.svg" alt="logo: Heat Stone">
+          </a>
+          <div class="header-phone"><a href="tel:+78006005013" class="phone-link">8 800 600-50-13</a> <span> Бесплатный
+              звонок по
+              России</span>
+          </div>
+          <div class="header-hours"><span>Рабочие дни: Пн-Сб</span> <span>Время: 9:00 - 18:00</span>
+          </div>
+        </div>
+        <nav class="header-nav">
+          <div class="ul-menu menu-list">
+            <div class="menu-item"><a href="#" class="menu-link">Каталог</a></div>
+            <div class="menu-item"><a href="#" class="menu-link">О нас</a></div>
+            <div class="menu-item"><a href="#" class="menu-link">Наши адреса</a></div>
+            <div class="menu-item"><a href="#" class="menu-link">Акции</a></div>
+          </div>
+          <div class="button header-feedback">Заказать звонок</div>
+        </nav>
+        <div class="header-slider">
+          <!-- Slider main container -->
+          <div class="header-swiper swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="img/slide1.jpg" width="100%" alt="slide 1">
+                <div class="slide-text">
+                  <h2 class="h2 slide-title">Экономьте до 34% электроэнергии
+                    на отоплении</h2>
+                  <p class="slide-subtitle">Соберите отопление из теплоемких каменных
+                    радиаторов со сроком службы свыше 20 лет</p>
+                  <button class="button slide-button">Собрать отопление</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide1.jpg" width="100%" alt="slide 2">
+                <div class="slide-text">
+                  <h2 class="h2 slide-title">Экономьте до 34% электроэнергии
+                    на отоплении</h2>
+                  <p class="slide-subtitle">Соберите отопление из теплоемких каменных
+                    радиаторов со сроком службы свыше 20 лет</p>
+                  <button class="button slide-button">Собрать отопление</button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/slide1.jpg" width="100%" alt="slide 3">
+                <div class="slide-text">
+                  <h2 class="h2 slide-title">Экономьте до 34% электроэнергии
+                    на отоплении</h2>
+                  <p class="slide-subtitle">Соберите отопление из теплоемких каменных
+                    радиаторов со сроком службы свыше 20 лет</p>
+                  <button class="button slide-button">Собрать отопление</button>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+      <div class="main"></div>
+      <footer class="footer"></footer>
+    </div>
+  </div>
+  <!-- Swiper-->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!--Initialisation swiper-->
+  <script>
+    const swiper = new Swiper('.header-swiper', {
+      // Optional parameters
+      // direction: 'vertical',
+      // loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
+    });
+  </script>
+</body>
+
+</html>

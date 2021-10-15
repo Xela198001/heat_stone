@@ -1,0 +1,138 @@
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+// шрапка главной страницы
+.header {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  &-wrapper {
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  &-top {
+    width: 100%;
+    min-height: 62px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #b9b9b9;
+  }
+
+  &-phone {
+    & .phone-link {
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      text-decoration: none;
+      color: $colorSecondary;
+    }
+    & span {
+      color: $colorTextOpacity;
+    }
+  }
+
+  &-nav {
+    width: 100%;
+    min-height: 79px;
+    padding: 14px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+}
+
+.menu-list {
+}
+
+.menu-item {
+}
+
+.menu-link {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 15px 22px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: $colorSecondary;
+  transition: background-color $timeTransition;
+
+  &:hover {
+    background: #fbe739;
+  }
+}
+
+.header-feedback {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: $colorSecondary;
+  color: $colorWhite;
+  font-size: 15px;
+  line-height: 19px;
+  transition: background-color $timeTransition;
+
+  &:hover {
+    background-color: $colorButtonHover;
+  }
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.slide-text {
+  max-width: 415px;
+  position: absolute;
+  top: 50px;
+  left: 85px;
+}
+
+.slide-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'TT Firs Neue';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 54px;
+  color: $colorSecondary;
+}
+
+.slide-subtitle {
+  margin-bottom: 25px;
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 21px;
+  color: $colorSecondary;
+}
+
+.slide-button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 46px;
+  background: #e4002b;
+  color: #fff;
+  border-radius: 5px;
+}
