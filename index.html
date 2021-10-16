@@ -12,11 +12,21 @@
   <link rel="stylesheet" href="css/styles.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/custom-swiper.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+  <script src="js/menu.js" defer></script>
+  <script src="js/tab.js" defer></script>
+  <script src="js/accordion.js" defer></script>
+  <script src="js/form.js" defer></script>
 </head>
 
 <body>
   <div class="container">
-    <div class="header">
+    <header class="header">
       <div class="wrapper header-wrapper">
         <div class="header-top">
           <a href="/" class="header-logo">
@@ -29,12 +39,12 @@
           <div class="header-hours"><span>Рабочие дни: Пн-Сб</span> <span>Время: 9:00 - 18:00</span>
           </div>
         </div>
-        <nav class="header-nav">
+        <nav class="header-nav header-nav-fixed" id="header-nav">
           <div class="ul-menu menu-list">
-            <div class="menu-item"><a href="#" class="menu-link">Каталог</a></div>
-            <div class="menu-item"><a href="#" class="menu-link">О нас</a></div>
-            <div class="menu-item"><a href="#" class="menu-link">Наши адреса</a></div>
-            <div class="menu-item"><a href="#" class="menu-link">Акции</a></div>
+            <div class="menu-item"><a href="catalog.html" class="menu-link">Каталог</a></div>
+            <div class="menu-item"><a href="about.html" class="menu-link">О нас</a></div>
+            <div class="menu-item"><a href="address.html" class="menu-link">Наши адреса</a></div>
+            <div class="menu-item"><a href="stock.html" class="menu-link" data-link="shares">Акции</a></div>
           </div>
           <div class="button header-feedback">Заказать звонок</div>
         </nav>
@@ -84,12 +94,478 @@
           </div>
         </div>
       </div>
-      <div class="main"></div>
-      <footer class="footer"></footer>
+    </header>
+    <div class="main">
+      <section class="section section-statistics">
+        <div class="statistics-list">
+          <div class="statistics-item">
+            <div class="h1 statistics-count">647+</div>
+            <p class="h8 statistics-text">Домов отапливаются нашими радиаторами по России</p>
+          </div>
+          <div class="statistics-item">
+            <div class="h1 statistics-count">18</div>
+            <p class="h8 statistics-text">Регионов в которых представлена наша компания и продукция</p>
+          </div>
+          <div class="statistics-item">
+            <div class="h1 statistics-count">820+</div>
+            <p class="h8 statistics-text">Квадратных метров, отапливаемых нашими радиаторами, ежемесячно</p>
+          </div>
+          <div class="statistics-item">
+            <div class="h1 statistics-count">7</div>
+            <p class="h8 statistics-text">Лет успешной работы на рынке</p>
+          </div>
+        </div>
+      </section>
+      <section class="section section-popular">
+        <div class="h4 section-title">Каменные радиаторы</div>
+        <div class="section-tabs">
+          <ul class="button-list">
+            <li class="button-item button-item-active" data-tabs-handler="base"><button class="button">Базовые
+                модели</button></li>
+            <li class="button-item" data-tabs-handler="art"><button class="button">Арт модели</button></li>
+            <li class="button-item" data-tabs-handler="termo"><button class="button">Терморегуляторы</button></li>
+          </ul>
+          <ul class="card-list">
+            <li class="card-item" data-tabs-field="base">
+              <div>
+                <div class="card-item-img">
+                  <img src="img/cards/bathroom.jpg" whith="295" alt="">
+                </div>
+                <div class="card-item-body">
+                  <div class="card-item-model"><span>Модель</span> <span>P-350R</span></div>
+                  <div class="card-item-price"><span>Цена за шт.</span><span>5 000 ₽</span></div>
+                  <a href="#" class="card-item-more">Подробнее<span></span></a>
+                </div>
+              </div>
+              <div>
+                <div class="card-item-img">
+                  <img src="img/cards/room.jpg" whith="295" alt="">
+                </div>
+                <div class="card-item-body">
+                  <div class="card-item-model"><span>Модель</span> <span>P-350R</span></div>
+                  <div class="card-item-price"><span>Цена за шт.</span><span>5 000 ₽</span></div>
+                  <a href="#" class="card-item-more">Подробнее<span></span></a>
+                </div>
+              </div>
+              <div>
+                <div class="card-item-img">
+                  <img src="img/cards/room1.jpg" whith="295" alt="">
+                </div>
+                <div class="card-item-body">
+                  <div class="card-item-model"><span>Модель</span> <span>P-350R</span></div>
+                  <div class="card-item-price"><span>Цена за шт.</span><span>5 000 ₽</span></div>
+                  <a href="#" class="card-item-more">Подробнее<span></span></a>
+                </div>
+              </div>
+            </li>
+            <li class="card-item hidden" data-tabs-field="art">
+              <div>
+                <div class="card-item-img">
+                  <img src="img/cards/bathroom.jpg" whith="295" alt="">
+                </div>
+                <div class="card-item-body">
+                  <div class="card-item-model"><span>Модель</span> <span>P-350R</span></div>
+                  <div class="card-item-price"><span>Цена за шт.</span><span>5 000 ₽</span></div>
+                  <a href="#" class="card-item-more">Подробнее<span></span></a>
+                </div>
+              </div>
+              <div>
+                <div class="card-item-img">
+                  <img src="img/cards/room.jpg" whith="295" alt="">
+                </div>
+                <div class="card-item-body">
+                  <div class="card-item-model"><span>Модель</span> <span>P-350R</span></div>
+                  <div class="card-item-price"><span>Цена за шт.</span><span>5 000 ₽</span></div>
+                  <a href="#" class="card-item-more">Подробнее<span></span></a>
+                </div>
+              </div>
+              <div>
+                <div class="card-item-img">
+                  <img src="img/cards/room1.jpg" whith="295" alt="">
+                </div>
+                <div class="card-item-body">
+                  <div class="card-item-model"><span>Модель</span> <span>P-350R</span></div>
+                  <div class="card-item-price"><span>Цена за шт.</span><span>5 000 ₽</span></div>
+                  <a href="#" class="card-item-more">Подробнее<span></span></a>
+                </div>
+              </div>
+            </li>
+            <li class="card-item hidden" data-tabs-field="termo">
+              <div>
+                <div class="card-item-img">
+                  <img src="img/cards/bathroom.jpg" whith="295" alt="">
+                </div>
+                <div class="card-item-body">
+                  <div class="card-item-model"><span>Модель</span> <span>P-350R</span></div>
+                  <div class="card-item-price"><span>Цена за шт.</span><span>5 000 ₽</span></div>
+                  <a href="#" class="card-item-more">Подробнее<span></span></a>
+                </div>
+              </div>
+              <div>
+                <div class="card-item-img">
+                  <img src="img/cards/room.jpg" whith="295" alt="">
+                </div>
+                <div class="card-item-body">
+                  <div class="card-item-model"><span>Модель</span> <span>P-350R</span></div>
+                  <div class="card-item-price"><span>Цена за шт.</span><span>5 000 ₽</span></div>
+                  <a href="#" class="card-item-more">Подробнее<span></span></a>
+                </div>
+              </div>
+              <div>
+                <div class="card-item-img">
+                  <img src="img/cards/room1.jpg" whith="295" alt="">
+                </div>
+                <div class="card-item-body">
+                  <div class="card-item-model"><span>Модель</span> <span>P-350R</span></div>
+                  <div class="card-item-price"><span>Цена за шт.</span><span>5 000 ₽</span></div>
+                  <a href="#" class="card-item-more">Подробнее<span></span></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section section-pick">
+        <div class="section-item">
+          <div class="item-text">
+            <div class="item-title">Подберите радиатор отопления за 54 секунды </div>
+            <p class="item-subtitle">Пройдите тест и узнайте какой радиатор лучше всего подходит вам
+            </p>
+            <button class="button item-button">Подобрать</button>
+          </div>
+          <div class="item-img">
+            <img src="img/pick.jpg" width="100%" alt="pick">
+          </div>
+        </div>
+      </section>
+      <section class="section section-approximate">
+        <div class="h4 section-title">Ориентировочный расчет <br>стоимости отопления от Heat Stone</div>
+        <div class="section-slider">
+          <div class="slider-wrapper">
+            <div class="app-slider slider-for">
+              <div>
+                <img src="img/slider/slide-1.png" alt="slide-1">
+              </div>
+              <div><img src="img/slider/slide-1.png" alt="slide-2"></div>
+              <div><img src="img/slider/slide-1.png" alt="slide-3"></div>
+            </div>
+            <div class="slider-nav">
+              <div><img src="img/slider/slide-1.png" width="100%" alt="slide-1"></div>
+              <div><img src="img/slider/slide-1.png" width="100%" alt="slide-2"></div>
+              <div><img src="img/slider/slide-1.png" width="100%" alt="slide-3"></div>
+            </div>
+          </div>
+          <div class="section-simple-price">
+            <div class="calculate-indicators">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="total">Итог: 62 000 ₽
+              69 200 ₽</div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-advantage">
+        <div class="h4 section-title">Преимущество нашего отопления</div>
+        <div class="advantage-list">
+          <div class="advantage-item">
+            <div class="advantage-item-svg"><img src="img/icon/statistics.svg" alt="Statistics"></div>
+            <div class="h5 advantage-item-title">Отличные показатели теплоемкости</div>
+            <div class="h8 advantage-item-text">Подобно камню на печи в сауне, радиатор накапливает в себе тепло и мягко
+              согревает
+              помещение. Он долго отдает тепло, потому время активной работы (нагревания) составляет всего 7–8 часов в
+              день. Конструкция радиаторов подразумевает отличную конвекцию – воздушные потоки нагреваются и
+              распространяются по всему помещению.</div>
+          </div>
+          <div class="advantage-item">
+            <div class="advantage-item-svg"><img src="img/icon/fire-extinguisher.svg" alt="fire-extinguisher"></div>
+            <div class="h5 advantage-item-title">Пожаробезопасность – один из ключевых моментов</div>
+            <div class="h8 advantage-item-text">Нагревательный элемент расположен внутри камня, он не контактирует с
+              окружающей
+              средой, на нем не подгорает оседающая пыль. Температура нагревательного элемента не превышает 100 оС, а
+              сам камень может иметь температуру не выше 90 оС. </div>
+          </div>
+          <div class="advantage-item">
+            <div class="advantage-item-svg"><img src="img/icon/application.svg" alt="application"></div>
+            <div class="h5 advantage-item-title">Автономность – плюс для потребителя</div>
+            <div class="h8 advantage-item-text">При установке системы в каждом помещении можно поддерживать определенную
+              температуру.
+              Это экономно и выгодно с точки зрения оплаты счетов. Снижение температуры всего на 2 оС дает почти 10
+              процентов экономии за месяц. В неиспользуемых комнатах температуру можно снизить до 6–8 оС и поднимать ее
+              лишь тогда, когда планируется пребывание людей в них.</div>
+          </div>
+          <div class="advantage-item">
+            <div class="advantage-item-svg"><img src="img/icon/sand-clock.svg" alt="sand-clock"></div>
+            <div class="h5 advantage-item-title">Надежность и долговечность системы</div>
+            <div class="h8 advantage-item-text">Производитель гарантирует до 20 лет беспроблемной работы радиаторов при
+              соблюдении
+              элементарных правил эксплуатации и ухода. При выходе из строя одного из радиаторов не придется
+              останавливать работу всей системы. Конструкция максимально простая и надежная. </div>
+          </div>
+          <div class="advantage-item">
+            <div class="advantage-item-svg"><img src="img/icon/mechanics.svg" alt="mechanics"></div>
+            <div class="h5 advantage-item-title">Простой монтаж
+              и подключение системы</div>
+            <div class="h8 advantage-item-text">Для установки радиаторов не нужно приглашать специалистов, с этим вполне
+              справится
+              любой электрик или хозяин дома, имеющий элементарные навыки работы с дрелью и другими инструментами.
+              Потребуется навесить радиаторы на дюбеля, соединить их с терморегуляторами и включить в сеть – система
+              отопления готова к работе. </div>
+          </div>
+          <div class="advantage-item">
+            <div class="advantage-item-svg"><img src="img/icon/economic.svg" alt="economic"></div>
+            <div class="h5 advantage-item-title">Низкая стартовая
+              стоимость всей системы</div>
+            <div class="h8 advantage-item-text">Затраты на покупку каменных радиаторов и их монтаж будут в 3-4 раза
+              дешевле любого
+              водяного отопления, будь то газовый или электрический котел. Для работы системы отопления из каменных
+              радиаторов не нужны дополнительные условия и отдельное помещение. Поломки случаются крайне редко, что
+              также снижает расходную часть в процессе эксплуатации.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-calculate">
+        <div class="section-item section-item-blue">
+          <div class="item-text item-text-right">
+            <div class="h3 item-title">Расчитайте стоимость отопления дома за 1 минуту</div>
+            <p class="h8 item-subtitle">Пройдите тест и узнайте сколько
+              радиаторов вам нужно и какой
+              будет расход электроэнергии
+            </p>
+            <button class="button item-button">Сделать расчет</button>
+          </div>
+          <div class="item-img item-img-left">
+            <img src="img/house.png" width="592" alt="pick">
+          </div>
+        </div>
+      </section>
+      <section class="section section-reviews">
+        <div class="h4 section-title">Видеообзоры и отзывы</div>
+        <div class="reviews-list">
+          <div class="reviews-item">
+            <div class="reviews-desc">Тестируем сколько стоит отопление КАМЕННЫМИ РАДИАТОРАМИ Heat Stone (Сагит
+              Гыйбашев) </div>
+            <div class="reviews-thumbnail">
+              <a href="#" class="reviews-thumbnail-link">
+                <img src="img/icon/play.svg" alt="icon play">
+              </a>
+            </div>
+          </div>
+          <div class="reviews-item">
+            <div class="reviews-desc">Как выбрать электрический эбогреватель?
+              [Сравниваем какой конвектор лучше] Heat Stone</div>
+            <div class="reviews-thumbnail">
+              <a href="#" class="reviews-thumbnail-link">
+                <img src="img/icon/play.svg" alt="icon play">
+              </a>
+            </div>
+          </div>
+          <div class="reviews-item">
+            <div class="reviews-desc">Надежное электроотопление частного дома каменными радиаторами - РЕАЛЬНЫЙ ОБЗОР |
+              Heat Stone</div>
+            <div class="reviews-thumbnail">
+              <a href="#" class="reviews-thumbnail-link">
+                <img src="img/icon/play.svg" alt="icon play">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="reviews-text">Если вам интересно, то можете посмотреть отзывы,
+          которые оставили клиенты на нашем Уoutube канале</div>
+        <a href="#" class="button link-youtube">Перейти на YouTube канал</a>
+      </section>
+      <section class="section section-faq" id="faq">
+        <h3 class="section-title h4 faq-title">Часто задаваемые вопросы</h3>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-link">
+              <div class="text">Какие терморегуляторы можно использовать?</div>
+              <div class="icon-accordion minus">
+                <span></span>
+              </div>
+            </button>
+            <div class="faq-desc hidden">У них другой температурный режим, хотя работают и те, и другие по принципу
+              конвекции. В конвекторах нагревательный элемент раскаляется до 300-400 градусов, из-за чего воздух в
+              помещении становится сухим, начинается горение пыли. Если речь идет о помещениях, где человек проводит
+              немного времени, разница может быть неощутима. А вот в жилых комнатах с обычными конвекторами дискомфорт
+              неизбежен. Он проявляется в виде сухости во рту, першении в горле, головных болях. Тяжелее вставать по
+              утрам, могут появиться аллергические реакции. С каменными радиаторами это исключено.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-link">
+              <div class="text">Чем ваши радиаторы лучше конвекторов?</div>
+              <div class="icon-accordion plus">
+                <span></span>
+              </div>
+            </button>
+            <div class="faq-desc hidden">У них другой температурный режим, хотя работают и те, и другие по принципу
+              конвекции. В конвекторах нагревательный элемент раскаляется до 300-400 градусов, из-за чего воздух в
+              помещении становится сухим, начинается горение пыли. Если речь идет о помещениях, где человек проводит
+              немного времени, разница может быть неощутима. А вот в жилых комнатах с обычными конвекторами дискомфорт
+              неизбежен. Он проявляется в виде сухости во рту, першении в горле, головных болях. Тяжелее вставать по
+              утрам, могут появиться аллергические реакции. С каменными радиаторами это исключено.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-link">
+              <div class="text">Насколько экономны такие радиаторы? Сколько энергии потребляют?</div>
+              <div class="icon-accordion plus">
+                <span></span>
+              </div>
+            </button>
+            <div class="faq-desc hidden">У них другой температурный режим, хотя работают и те, и другие по принципу
+              конвекции. В конвекторах нагревательный элемент раскаляется до 300-400 градусов, из-за чего воздух в
+              помещении становится сухим, начинается горение пыли. Если речь идет о помещениях, где человек проводит
+              немного времени, разница может быть неощутима. А вот в жилых комнатах с обычными конвекторами дискомфорт
+              неизбежен. Он проявляется в виде сухости во рту, першении в горле, головных болях. Тяжелее вставать по
+              утрам, могут появиться аллергические реакции. С каменными радиаторами это исключено.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-link">
+              <div class="text">Как подключаются терморегуляторы?</div>
+              <div class="icon-accordion plus">
+                <span></span>
+              </div>
+            </button>
+            <div class="faq-desc hidden">У них другой температурный режим, хотя работают и те, и другие по принципу
+              конвекции. В конвекторах нагревательный элемент раскаляется до 300-400 градусов, из-за чего воздух в
+              помещении становится сухим, начинается горение пыли. Если речь идет о помещениях, где человек проводит
+              немного времени, разница может быть неощутима. А вот в жилых комнатах с обычными конвекторами дискомфорт
+              неизбежен. Он проявляется в виде сухости во рту, першении в горле, головных болях. Тяжелее вставать по
+              утрам, могут появиться аллергические реакции. С каменными радиаторами это исключено.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-link">
+              <div class="text">Радиаторы точно прослужат 20 лет?</div>
+              <div class="icon-accordion plus">
+                <span></span>
+              </div>
+            </button>
+            <div class="faq-desc hidden">У них другой температурный режим, хотя работают и те, и другие по принципу
+              конвекции. В конвекторах нагревательный элемент раскаляется до 300-400 градусов, из-за чего воздух в
+              помещении становится сухим, начинается горение пыли. Если речь идет о помещениях, где человек проводит
+              немного времени, разница может быть неощутима. А вот в жилых комнатах с обычными конвекторами дискомфорт
+              неизбежен. Он проявляется в виде сухости во рту, першении в горле, головных болях. Тяжелее вставать по
+              утрам, могут появиться аллергические реакции. С каменными радиаторами это исключено.
+            </div>
+          </div>
+        </div>
+        <a href="#" class="faq-more">Смотреть еще</a>
+      </section>
+      <section class="section section-feedback">
+        <div class="h4 section-title feedback-title">Поможем в выборе!</div>
+        <form action="#" class="form-feedback" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Иван">
+            <label for="name">Имя</label>
+            <span></span>
+            <small id="error-name" class="form-error">Введите имя</small>
+          </div>
+          <div class="form-group">
+            <input type="tel" class="form-control" id="phone" placeholder="+ 7 (939) 333-33-33">
+            <label for="phone">Телефон</label>
+            <span></span>
+            <small id="error-phone" class="form-error">Номер телефона должен состоять из 11 цифр</small>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ivan@mail.ru">
+            <label for="email">Email</label>
+            <span></span>
+            <small id="error-email" class="form-error">Проверьте адерс электронной почты</small>
+          </div>
+          <button name="submit" type="submit" class="h8 button btn-primary button-submit" disabled>Отправить</button>
+          <p class="h9 privacy-policy-text">Нажимая на кнопку, вы соглашаетесь
+            на обработку персональных данных</p>
+        </form>
+      </section>
     </div>
+    <footer class="footer">
+      <div class="footer-up">
+        <div class="footer-contacts">
+          <span><a href="tel:8 800 600 50 13" class="footer-phone">8 800 600 50 13</a></span>
+          <span>для звонков по всей России</span>
+          <span>Рабочие дни: Пн-Сб<br>
+            Рабочее время: 9:00 - 18:00<br>
+            <a href="mailto:heat.stone.ru@yandex.ru" class="footer-email">heat.stone.ru@yandex.ru</a></span>
+        </div>
+        <div class="footer-nav">
+          <ul class="menu-list">
+            <li class="menu-item"><a href="#" class="h6 menu-link">Каталог</a></li>
+            <li class="menu-item"><a href="#" class="h6 menu-link">О нас</a></li>
+            <li class="menu-item"><a href="#" class="h6 menu-link">Наши адреса</a></li>
+            <li class="menu-item"><a href="#" class="h6 menu-link">Акции</a></li>
+          </ul>
+        </div>
+        <div class="footer-button">
+          <button class="button button-primary button-cooperation">Приглашаем к сотруднечеству</button>
+        </div>
+        <div class="footer-socail">
+          <a href="#" class="social-link">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_613:1641)">
+                <path
+                  d="M16.1977 11.2219L10.7992 8.26807C10.4887 8.09823 10.1218 8.10457 9.81758 8.28485C9.51313 8.46532 9.33154 8.78412 9.33154 9.13797V14.995C9.33154 15.3472 9.51201 15.6654 9.81441 15.8461C9.97232 15.9404 10.1474 15.9878 10.3228 15.9878C10.4835 15.9878 10.6446 15.9481 10.7928 15.8683L16.1916 12.9653C16.512 12.7928 16.7121 12.4597 16.7136 12.0956C16.7149 11.7315 16.5173 11.3968 16.1977 11.2219ZM10.7635 14.2582V9.88073L14.7983 12.0885L10.7635 14.2582Z" />
+                <path
+                  d="M24.4748 7.42841L24.4737 7.41722C24.453 7.22053 24.247 5.47103 23.3965 4.58118C22.4134 3.53453 21.2989 3.40739 20.7629 3.34642C20.7185 3.34139 20.6779 3.33673 20.6415 3.33188L20.5988 3.32741C17.3683 3.0925 12.4895 3.06043 12.4407 3.06025L12.4364 3.06006L12.4321 3.06025C12.3833 3.06043 7.50447 3.0925 4.24486 3.32741L4.2018 3.33188C4.16712 3.33654 4.1289 3.34083 4.08732 3.34568C3.55748 3.40683 2.45491 3.53416 1.46905 4.61865C0.658991 5.499 0.42483 7.21103 0.400781 7.40343L0.397984 7.42841C0.390713 7.51025 0.218262 9.45868 0.218262 11.4148V13.2433C0.218262 15.1994 0.390713 17.1478 0.397984 17.2298L0.399289 17.2421C0.419983 17.4357 0.625806 19.1531 1.4724 20.0433C2.39674 21.0549 3.5655 21.1888 4.19415 21.2607C4.29352 21.2721 4.37909 21.2818 4.43745 21.2921L4.49394 21.2999C6.35921 21.4774 12.2075 21.5648 12.4554 21.5684L12.4629 21.5685L12.4703 21.5684C12.5192 21.5682 17.3978 21.5361 20.6283 21.3012L20.671 21.2967C20.7118 21.2913 20.7577 21.2865 20.808 21.2812C21.3349 21.2253 22.4315 21.1092 23.4037 20.0394C24.2138 19.1589 24.4481 17.4468 24.472 17.2546L24.4748 17.2297C24.4821 17.1476 24.6547 15.1994 24.6547 13.2433V11.4148C24.6545 9.45868 24.4821 7.51044 24.4748 7.42841ZM23.2225 13.2433C23.2225 15.0538 23.0644 16.9183 23.0495 17.0895C22.9887 17.5609 22.7417 18.6441 22.347 19.0731C21.7385 19.7426 21.1134 19.809 20.657 19.8573C20.6018 19.863 20.5507 19.8686 20.5045 19.8744C17.3799 20.1004 12.6853 20.135 12.469 20.1364C12.2265 20.1328 6.4638 20.0446 4.65539 19.8766C4.56273 19.8615 4.46262 19.85 4.35709 19.8381C3.82184 19.7767 3.08916 19.6928 2.52575 19.0731L2.51252 19.0589C2.12473 18.6549 1.88479 17.642 1.82383 17.095C1.81246 16.9657 1.65026 15.0791 1.65026 13.2433V11.4148C1.65026 9.60634 1.80798 7.74386 1.82327 7.56917C1.89579 7.01378 2.14748 5.99622 2.52575 5.58494C3.15292 4.89513 3.8142 4.8187 4.25157 4.76817C4.29333 4.76333 4.3323 4.75885 4.36828 4.75419C7.5384 4.52711 12.2667 4.49337 12.4364 4.49206C12.606 4.49318 17.3327 4.52711 20.4747 4.75419C20.5133 4.75904 20.5554 4.76388 20.6007 4.7691C21.0506 4.82037 21.7305 4.89793 22.3545 5.5635L22.3603 5.56966C22.7481 5.97366 22.988 7.00427 23.049 7.56227C23.0598 7.68438 23.2225 9.57502 23.2225 11.4148V13.2433Z" />
+              </g>
+            </svg>
+          </a>
+          <a href="#" class="social-link">
+            <svg width="23" height="24" viewBox="0 0 23 24" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_613:1637)">
+                <path
+                  d="M22.7607 7.64482C22.7075 6.43917 22.5126 5.61029 22.2333 4.89206C21.9451 4.12967 21.5019 3.4471 20.9211 2.87969C20.3537 2.30344 19.6666 1.85567 18.9131 1.57205C18.1907 1.29275 17.3661 1.09778 16.1605 1.04462C14.9458 0.986965 14.5602 0.973633 11.4795 0.973633C8.39879 0.973633 8.01318 0.986965 6.80302 1.04012C5.59737 1.09328 4.76849 1.28842 4.05043 1.56754C3.28787 1.85567 2.60531 2.29894 2.03789 2.87969C1.46164 3.4471 1.01404 4.13417 0.730248 4.88773C0.450954 5.61029 0.255986 6.43466 0.202828 7.64032C0.145169 8.85498 0.131836 9.24059 0.131836 12.3213C0.131836 15.402 0.145169 15.7876 0.198326 16.9978C0.251484 18.2034 0.446626 19.0323 0.725919 19.7505C1.01404 20.5129 1.46164 21.1955 2.03789 21.7629C2.60531 22.3392 3.29237 22.7869 4.04593 23.0706C4.76849 23.3499 5.59287 23.5448 6.7987 23.598C8.00868 23.6513 8.39446 23.6645 11.4752 23.6645C14.5559 23.6645 14.9415 23.6513 16.1517 23.598C17.3573 23.5448 18.1862 23.3499 18.9042 23.0706C20.4292 22.481 21.6349 21.2753 22.2244 19.7505C22.5036 19.028 22.6987 18.2034 22.7519 16.9978C22.805 15.7876 22.8183 15.402 22.8183 12.3213C22.8183 9.24059 22.8138 8.85498 22.7607 7.64482ZM20.7173 16.9091C20.6685 18.0173 20.4824 18.6157 20.3272 19.0147C19.9459 20.0032 19.1614 20.7877 18.1729 21.169C17.7739 21.3242 17.1712 21.5103 16.0673 21.5589C14.8705 21.6123 14.5116 21.6254 11.484 21.6254C8.45645 21.6254 8.093 21.6123 6.90051 21.5589C5.79234 21.5103 5.19393 21.3242 4.79498 21.169C4.30306 20.9872 3.85529 20.6991 3.49184 20.3223C3.11507 19.9543 2.82694 19.5111 2.64513 19.0192C2.48999 18.6202 2.30385 18.0173 2.25519 16.9136C2.20186 15.7168 2.1887 15.3577 2.1887 12.3301C2.1887 9.30258 2.20186 8.93913 2.25519 7.74681C2.30385 6.63864 2.48999 6.04022 2.64513 5.64128C2.82694 5.14919 3.11507 4.70159 3.49635 4.33797C3.86412 3.96119 4.30739 3.67307 4.79949 3.49143C5.19843 3.33629 5.80134 3.15015 6.90501 3.10132C8.10183 3.04816 8.46095 3.03483 11.4883 3.03483C14.5204 3.03483 14.8793 3.04816 16.0718 3.10132C17.18 3.15015 17.7784 3.33629 18.1774 3.49143C18.6693 3.67307 19.1171 3.96119 19.4805 4.33797C19.8573 4.70592 20.1454 5.14919 20.3272 5.64128C20.4824 6.04022 20.6685 6.64297 20.7173 7.74681C20.7705 8.94363 20.7838 9.30258 20.7838 12.3301C20.7838 15.3577 20.7705 15.7123 20.7173 16.9091Z" />
+                <path
+                  d="M11.4786 6.49219C8.26061 6.49219 5.64966 9.10297 5.64966 12.3212C5.64966 15.5394 8.26061 18.1501 11.4786 18.1501C14.6968 18.1501 17.3076 15.5394 17.3076 12.3212C17.3076 9.10297 14.6968 6.49219 11.4786 6.49219ZM11.4786 16.1023C9.39095 16.1023 7.69752 14.409 7.69752 12.3212C7.69752 10.2333 9.39095 8.54005 11.4786 8.54005C13.5665 8.54005 15.2598 10.2333 15.2598 12.3212C15.2598 14.409 13.5665 16.1023 11.4786 16.1023Z" />
+                <path
+                  d="M18.899 6.26217C18.899 7.01364 18.2897 7.62296 17.538 7.62296C16.7866 7.62296 16.1772 7.01364 16.1772 6.26217C16.1772 5.51051 16.7866 4.90137 17.538 4.90137C18.2897 4.90137 18.899 5.51051 18.899 6.26217Z" />
+              </g>
+              <defs>
+                <clipPath id="clip0_613:1637">
+                  <rect width="22.6909" height="22.6909" fill="white" transform="translate(0.0908203 0.974121)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-logo">ООО «Эко Тепло»</div>
+        <div class="footer-address">Адрес: 420124, г. Казань, ул. Комиссара Габишева, 2</div>
+        <a href="" class="footer-link privacy-policy">Политика конфиденциальности</a>
+      </div>
+    </footer>
   </div>
   <!-- Swiper-->
+  <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js" r></script> -->
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <!--Initialisation slick-->
+  <script>
+    $(document).ready(function () {
+      $('.app-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+      });
+      $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+      });
+    });
+  </script>
+
   <!--Initialisation swiper-->
   <script>
     const swiper = new Swiper('.header-swiper', {
@@ -98,6 +574,7 @@
       // loop: true,
 
       // If we need pagination
+      speed: 1000,
       pagination: {
         el: '.swiper-pagination',
       },
