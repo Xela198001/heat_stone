@@ -7,15 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <title>Heat Stone</title>
+  <title>Heat Stone - Контакты</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/custom-swiper.min.css">
   <script src="js/menu.js" defer></script>
-  <script src="js/tab.js" defer></script>
-  <script src="js/accordion.js" defer></script>
-  <script src="js/form.js" defer></script>
 </head>
 
 <body>
@@ -37,14 +32,42 @@
           <div class="ul-menu menu-list">
             <div class="menu-item"><a href="catalog.html" class="menu-link">Каталог</a></div>
             <div class="menu-item"><a href="about.html" class="menu-link">О нас</a></div>
-            <div class="menu-item"><a href="address.html" class="menu-link">Наши адреса</a></div>
-            <div class="menu-item"><a href="stock.html" class="menu-link" data-link="shares">Акции</a></div>
+            <div class="menu-item"><a href="catalog.html" class="menu-link">Наши адреса</a></div>
+            <div class="menu-item"><a href="about.html" class="menu-link" data-link="shares">Акции</a></div>
           </div>
-          <div class="button header-feedback">Заказать звонок</div>
+          <div class=" button button header-feedback">Заказать звонок</div>
         </nav>
+        <ul id="breadcrumb" class="breadcrumb">
+          <li><a href="/">Главная</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
       </div>
     </header>
     <div class="main">
+      <section class="section section-about">
+        <div class="h2 catalog-title"><span><img src="img/icon/agenda.svg" alt="icon agenda"></span>Наши контакты</div>
+        <ul class="menu-about">
+          <li class="menu-item"><a href="about.html">О нас</a></li>
+          <li class="menu-item active"><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </section>
+      <section class="section section-contacts">
+        <div class="contacts-title">
+          <div class="h5 contact">
+            <div class="h5 contacts-address"><span>Казань, пр. Универсиады 10,</span>
+              <span>10.00 - 21.00,</span>
+              <span class="address-red">БЕЗ ВЫХОДНЫХ</span></div>
+            <div class="contacts-email"><a href="mailto:heat.stone.ru@yandex.ru">heat.stone.ru@yandex.ru</a>
+              Почта</div>
+            <div class="contacts-phone"><a href="tel:8 (800) 600-50-13">8 (800) 600-50-13</a>
+              Контактный центр</div>
+          </div>
+          <div class="contacts-map">
+            <img src="img/map.jpg" width="1261" height="532" alt="google map">
+          </div>
+        </div>
+      </section>
     </div>
     <footer class="footer">
       <div class="footer-up">
@@ -59,12 +82,12 @@
           <ul class="menu-list">
             <li class="menu-item"><a href="catalog.html" class="h6 menu-link">Каталог</a></li>
             <li class="menu-item"><a href="about.html" class="h6 menu-link">О нас</a></li>
-            <li class="menu-item"><a href="catalog.html" class="h6 menu-link">Наши адреса</a></li>
-            <li class="menu-item"><a href="about.html" class="h6 menu-link">Акции</a></li>
+            <li class="menu-item"><a href="address.html" class="h6 menu-link">Наши адреса</a></li>
+            <li class="menu-item"><a href="stock.html" class="h6 menu-link">Акции</a></li>
           </ul>
         </div>
         <div class="footer-button">
-          <button class="button button-primary button-cooperation">приглашаем к сотруднечеству</button>
+          <button class=" button button button-primary button-cooperation">приглашаем к сотруднечеству</button>
         </div>
         <div class="footer-socail">
           <a href="#" class="social-link">
@@ -103,33 +126,6 @@
       </div>
     </footer>
   </div>
-  <!-- Swiper-->
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <!--Initialisation swiper-->
-  <script>
-    const swiper = new Swiper('.header-swiper', {
-      // Optional parameters
-      // direction: 'vertical',
-      // loop: true,
-
-      // If we need pagination
-      speed: 1000,
-      pagination: {
-        el: '.swiper-pagination',
-      },
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      // And if we need scrollbar
-      // scrollbar: {
-      //   el: '.swiper-scrollbar',
-      // },
-    });
-  </script>
 </body>
 
 </html>

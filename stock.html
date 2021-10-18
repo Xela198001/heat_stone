@@ -10,12 +10,7 @@
   <title>Heat Stone</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/custom-swiper.min.css">
   <script src="js/menu.js" defer></script>
-  <script src="js/tab.js" defer></script>
-  <script src="js/accordion.js" defer></script>
-  <script src="js/form.js" defer></script>
 </head>
 
 <body>
@@ -42,9 +37,51 @@
           </div>
           <div class="button header-feedback">Заказать звонок</div>
         </nav>
+        <ul id="breadcrumb" class="breadcrumb">
+          <li><a href="/">Главная</a></li>
+          <li><a href="stock.html">Акции</a></li>
+        </ul>
       </div>
     </header>
     <div class="main">
+      <section class="section section-stock">
+        <div class="h2 stock-title"><span><img src="img/icon/megaphone.svg" alt="icon house"></span>Акции</div>
+        <div class="stock-list">
+          <div class="stock-item">
+            <div class="item-img">
+              <div>
+                <img src="img/icon/percent.svg" alt="percent">
+              </div>
+            </div>
+            <div class="item-title">На предоплату</div>
+            <div class="item-subtitle">На весь заказ при предоплате 5 -10% от суммы заказа до отправки</div>
+            <div class="item-count-persent">2%</div>
+            <div class="item-term">Бессрочно</div>
+          </div>
+          <div class="stock-item">
+            <div class="item-img">
+              <div>
+                <img src="img/icon/percent.svg" alt="percent">
+              </div>
+            </div>
+            <div class="item-title">Для пенсионеров</div>
+            <div class="item-subtitle">Для пенсионеров при предъявлении пенсионного удостоверения</div>
+            <div class="item-count-persent">10%</div>
+            <div class="item-term">Бессрочно</div>
+          </div>
+          <div class="stock-item">
+            <div class="item-img">
+              <div>
+                <img src="img/icon/percent.svg" alt="percent">
+              </div>
+            </div>
+            <div class="item-title">На доставку</div>
+            <div class="item-subtitle">Доставка по всей России при заказе на сумму от 50 000 руб</div>
+            <div class="item-count-persent">Бесплатно</div>
+            <div class="item-term">До конца октября</div>
+          </div>
+        </div>
+      </section>
       <section class="section section-pick">
         <div class="section-item">
           <div class="item-text">
@@ -96,10 +133,10 @@
         </div>
         <div class="footer-nav">
           <ul class="menu-list">
-            <li class="menu-item"><a href="#" class="h6 menu-link">Каталог</a></li>
-            <li class="menu-item"><a href="#" class="h6 menu-link">О нас</a></li>
-            <li class="menu-item"><a href="#" class="h6 menu-link">Наши адреса</a></li>
-            <li class="menu-item"><a href="#" class="h6 menu-link">Акции</a></li>
+            <li class="menu-item"><a href="catalog.html" class="h6 menu-link">Каталог</a></li>
+            <li class="menu-item"><a href="about.html" class="h6 menu-link">О нас</a></li>
+            <li class="menu-item"><a href="address.html" class="h6 menu-link">Наши адреса</a></li>
+            <li class="menu-item"><a href="stock.html" class="h6 menu-link">Акции</a></li>
           </ul>
         </div>
         <div class="footer-button">
@@ -142,33 +179,6 @@
       </div>
     </footer>
   </div>
-  <!-- Swiper-->
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <!--Initialisation swiper-->
-  <script>
-    const swiper = new Swiper('.header-swiper', {
-      // Optional parameters
-      // direction: 'vertical',
-      // loop: true,
-
-      // If we need pagination
-      speed: 1000,
-      pagination: {
-        el: '.swiper-pagination',
-      },
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      // And if we need scrollbar
-      // scrollbar: {
-      //   el: '.swiper-scrollbar',
-      // },
-    });
-  </script>
 </body>
 
 </html>
